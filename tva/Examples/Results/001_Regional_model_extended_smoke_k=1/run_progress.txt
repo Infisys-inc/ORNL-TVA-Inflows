@@ -1,0 +1,10 @@
+Epoch: 1  | Loss training: 0.052 | NSE validation: 0.665 | Epoch time: 217.7s | LR: 0.00050
+Epoch: 2  | Loss training: 0.030 | NSE validation: 0.756 | Epoch time: 211.3s | LR: 0.00050
+Epoch: 3  | Loss training: 0.025 | NSE validation: 0.757 | Epoch time: 214.6s | LR: 0.00050
+Epoch: 4  | Loss training: 0.021 | NSE validation: 0.761 | Epoch time: 223.3s | LR: 0.00050
+Epoch: 5  | Loss training: 0.018 | NSE validation: 0.744 | Epoch time: 220.7s | LR: 0.00050
+Epoch: 6  | Loss training: 0.016 | NSE validation: 0.729 | Epoch time: 210.9s | LR: 0.00050
+Epoch: 7  | Loss training: 0.015 | NSE validation: 0.700 | Epoch time: 207.9s | LR: 0.00050
+Epoch: 8  | Loss training: 0.014 | NSE validation: 0.712 | Epoch time: 215.7s | LR: 0.00050
+Epoch: 9  | Loss training: 0.013 | NSE validation: 0.697 | Epoch time: 208.5s | LR: 0.00050
+Epoch: 10 | Loss training: 0.013 | NSE validation: 0.708 | Epoch time: 207.5s | LR: 0.00050
