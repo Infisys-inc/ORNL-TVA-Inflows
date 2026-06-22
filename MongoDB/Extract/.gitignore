@@ -1,0 +1,6 @@
+workspace.xml
+*.zip
+*.nc
+*.7z
+*.zarr
+*.zarr3

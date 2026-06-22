@@ -1,0 +1,631 @@
+{
+	"connection": "mongodb://fews_admin:AvjgHB1zgtBS*T#@knxpwmongodb1.main.tva.gov:27017/?tls=true&authSource=admin",
+	"database": "FEWS_ARCHIVE",
+	"queries": [
+		{
+			"process": false,
+			"collection": "ExternalHistoricalScalarTimeSeries",
+			"event_start_time_key": "startTime",
+			"event_end_time_key": "endTime",
+			"event_time_key": "t",
+			"event_value_key": "v",
+			"observed_time_chunk_size": 1000,
+			"file_format": "nc",
+			"aggregate": [{"$match": {"moduleInstanceId": "Preprocess_HG_to_QR", "parameterId": "QR", "qualifierId": "[]", "encodedTimeStepId": "SETS60"}}],
+			"folder_overrides": {},
+			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
+			"threads": 16
+		},
+		{
+			"process": false,
+			"collection": "ExternalHistoricalScalarTimeSeries",
+			"event_start_time_key": "startTime",
+			"event_end_time_key": "endTime",
+			"event_time_key": "t",
+			"event_value_key": "v",
+			"observed_time_chunk_size": 1000,
+			"file_format": "nc",
+			"aggregate": [{"$match": {"moduleInstanceId": "Preprocess_HG_to_QR", "parameterId": "HG", "qualifierId": "[]", "encodedTimeStepId": "SETS60"}}],
+			"folder_overrides": {},
+			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
+			"threads": 16
+		},
+		{
+			"process": false,
+			"collection": "ExternalHistoricalScalarTimeSeries",
+			"event_start_time_key": "startTime",
+			"event_end_time_key": "endTime",
+			"event_time_key": "t",
+			"event_value_key": "v",
+			"observed_time_chunk_size": 1000,
+			"file_format": "nc",
+			"aggregate": [{"$match": {"moduleInstanceId": "QPE_to_MAP", "parameterId": "MAP", "qualifierId": "[]", "encodedTimeStepId": "SETS60"}}],
+			"folder_overrides": {},
+			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
+			"threads": 16
+		},
+		{
+			"process": false,
+			"collection": "ExternalHistoricalScalarTimeSeries",
+			"event_start_time_key": "startTime",
+			"event_end_time_key": "endTime",
+			"event_time_key": "t",
+			"event_value_key": "v",
+			"observed_time_chunk_size": 1000,
+			"file_format": "nc",
+			"aggregate": [{"$match": {"moduleInstanceId": "Preprocess_QT", "parameterId": "QT", "qualifierId": "[]", "encodedTimeStepId": "SETS60"}}],
+			"folder_overrides": {},
+			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
+			"threads": 16
+		},
+		{
+			"process": false,
+			"collection": "ExternalHistoricalScalarTimeSeries",
+			"event_start_time_key": "startTime",
+			"event_end_time_key": "endTime",
+			"event_time_key": "t",
+			"event_value_key": "v",
+			"observed_time_chunk_size": 1000,
+			"file_format": "nc",
+			"aggregate": [{"$match": {"moduleInstanceId": "Preprocess_QT", "parameterId": "QT", "qualifierId": "[]", "encodedTimeStepId": "DTOD_0_6_12_18TZ_CST"}}],
+			"folder_overrides": {},
+			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
+			"threads": 16
+		},
+		{
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_HP",
+                        "parameterId" : "HP",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "DTOD_0_6_12_18TZ_CST"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "HP_SixHour_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_HP",
+                        "parameterId" : "HP",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "SETS60"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "HP_Hourly_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_HG_to_QR",
+                        "parameterId" : "QR",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "DTOD_0_6_12_18TZ_CST"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "QR_SixHour_Observed_HG_to_QR"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_QI",
+                        "parameterId" : "QI",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "DTOD_0_6_12_18TZ_CST"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "QR_SixHour_Observed_QI"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_HG_to_QR",
+                        "parameterId" : "QR",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "SETS60"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "QR_Hourly_Observed_HG_to_QR"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_QI",
+                        "parameterId" : "QI",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "SETS60"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "QR_Hourly_Observed_QI"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : {
+                            "$in" : [
+                                "LOCAL_ALCT1_Observed",
+                                "LOCAL_ARTT1_Observed",
+                                "LOCAL_AVLN7_Observed",
+                                "LOCAL_BARK2_Observed",
+                                "LOCAL_BCRA1_Observed",
+                                "LOCAL_BLAN7_Observed",
+                                "LOCAL_BOOT1_Observed",
+                                "LOCAL_BRDG1_Observed",
+                                "LOCAL_BSBA1_Observed",
+                                "LOCAL_CALT1_Observed",
+                                "LOCAL_CHAN7_Observed",
+                                "LOCAL_CHEN7_Observed",
+                                "LOCAL_CHKT1_Observed",
+                                "LOCAL_CKDT1_Observed",
+                                "LOCAL_CLTT1_Observed",
+                                "LOCAL_CLVV2_Observed",
+                                "LOCAL_CNVT1_Observed",
+                                "LOCAL_COLT1_Observed",
+                                "LOCAL_CPHT1_Observed",
+                                "LOCAL_CRKT1_Observed",
+                                "LOCAL_DILN7_Observed",
+                                "LOCAL_DUGT1_Observed",
+                                "LOCAL_EZBT1_Observed",
+                                "LOCAL_FONN7_Observed",
+                                "LOCAL_FPHT1_Observed",
+                                "LOCAL_FYTT1_Observed",
+                                "LOCAL_GATV2_Observed",
+                                "LOCAL_GGRT1_Observed",
+                                "LOCAL_GVDA1_Observed",
+                                "LOCAL_HADT1_Observed",
+                                "LOCAL_HEPN7_Observed",
+                                "LOCAL_HIWN7_Observed",
+                                "LOCAL_HMLT1_Observed",
+                                "LOCAL_HRFT1_Observed",
+                                "LOCAL_JSST1_Observed",
+                                "LOCAL_KYDK2_Observed",
+                                "LOCAL_LBVT1_Observed",
+                                "LOCAL_MARN7_Observed",
+                                "LOCAL_MHDT1_Observed",
+                                "LOCAL_MLTT1_Observed",
+                                "LOCAL_MYVT1_Observed",
+                                "LOCAL_NEEN7_Observed",
+                                "LOCAL_NEPT1_Observed",
+                                "LOCAL_NKJT1_Observed",
+                                "LOCAL_NOTG1_Observed",
+                                "LOCAL_NRMT1_Observed",
+                                "LOCAL_NRST1_Observed",
+                                "LOCAL_NWPT1_Observed",
+                                "LOCAL_OCAT1_Observed",
+                                "LOCAL_OCCT1_Observed",
+                                "LOCAL_PICT1_Observed",
+                                "LOCAL_PORT1_Observed",
+                                "LOCAL_PSPT1_Observed",
+                                "LOCAL_RBYA1_Observed",
+                                "LOCAL_SFYV2_Observed",
+                                "LOCAL_SHDT1_Observed",
+                                "LOCAL_SHVT1_Observed",
+                                "LOCAL_TAZT1_Observed",
+                                "LOCAL_TKRN7_Observed",
+                                "LOCAL_TKSN7_Observed",
+                                "LOCAL_WBOT1_Observed",
+                                "LOCAL_WHLA1_Observed",
+                                "LOCAL_WLSA1_Observed",
+                                "LOCAL_WTGT1_Observed"
+                            ]
+                        },
+                        "parameterId" : "QR",
+                        "qualifierId" : "[\"Loc\"]",
+                        "encodedTimeStepId" : "DTOD_0_6_12_18TZ_CST"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "QR_Local_SixHour_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : {
+                            "$in" : [
+                                "LOCAL_BARK2_Observed",
+                                "LOCAL_BCRA1_Observed",
+                                "LOCAL_BOOT1_Observed",
+                                "LOCAL_BRDG1_Observed",
+                                "LOCAL_CALT1_Observed",
+                                "LOCAL_CHEN7_Observed",
+                                "LOCAL_CKDT1_Observed",
+                                "LOCAL_CLTT1_Observed",
+                                "LOCAL_CPHT1_Observed",
+                                "LOCAL_CRKT1_Observed",
+                                "LOCAL_DILN7_Observed",
+                                "LOCAL_DUGT1_Observed",
+                                "LOCAL_EZBT1_Observed",
+                                "LOCAL_FONN7_Observed",
+                                "LOCAL_FPHT1_Observed",
+                                "LOCAL_FYTT1_Observed",
+                                "LOCAL_GVDA1_Observed",
+                                "LOCAL_HADT1_Observed",
+                                "LOCAL_HIWN7_Observed",
+                                "LOCAL_HRFT1_Observed",
+                                "LOCAL_JSST1_Observed",
+                                "LOCAL_KYDK2_Observed",
+                                "LOCAL_MHDT1_Observed",
+                                "LOCAL_NEPT1_Observed",
+                                "LOCAL_NKJT1_Observed",
+                                "LOCAL_OCAT1_Observed",
+                                "LOCAL_OCCT1_Observed",
+                                "LOCAL_PICT1_Observed",
+                                "LOCAL_RBYA1_Observed",
+                                "LOCAL_SHVT1_Observed",
+                                "LOCAL_TKRN7_Observed",
+                                "LOCAL_TKSN7_Observed",
+                                "LOCAL_WBOT1_Observed",
+                                "LOCAL_WHLA1_Observed",
+                                "LOCAL_WLSA1_Observed"
+                            ]
+                        },
+                        "parameterId" : "QR",
+                        "qualifierId" : "[\"Loc\"]",
+                        "encodedTimeStepId" : "SETS60"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "QR_Local_Hourly_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "QPE_to_MAP",
+                        "parameterId" : "MAP",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "DTOD_0_6_12_18TZ_CST"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "MAP_SixHour_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "QPE_to_MAP",
+                        "parameterId" : "MAP",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "SETS60"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "MAP_Hourly_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_VT",
+                        "parameterId" : "VT",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "DTOD_0_6_12_18TZ_CST"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "VT_SixHour_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_VT",
+                        "parameterId" : "VT",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "SETS60"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "VT_Hourly_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_VT",
+                        "parameterId" : "VT",
+                        "qualifierId" : "[\"Total_Hydro\"]",
+                        "encodedTimeStepId" : "DTOD_0TZ_CST"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "VT_TOTAL_HYDRO_Daily_Observed_VT"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_SEPA",
+                        "parameterId" : "VT",
+                        "qualifierId" : "[\"Retained\"]",
+                        "encodedTimeStepId" : "SETS60"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "VT_TOTAL_SEPA_Hourly_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_QT",
+                        "parameterId" : "QT",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "DTOD_0_6_12_18TZ_CST"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "QT_SixHour_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_QT",
+                        "parameterId" : "QT",
+                        "qualifierId" : "[]",
+                        "encodedTimeStepId" : "SETS60"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "QT_Hourly_Observed_Default"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_VT",
+                        "parameterId" : "VT",
+                        "qualifierId" : "[\"Total_Hydro_Max\"]",
+                        "encodedTimeStepId" : "DTOD_0TZ_CST"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "VT_MAX_HYDRO_Daily_Observed_VT"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        },
+        {
+            "process" : true,
+            "collection" : "ExternalHistoricalScalarTimeSeries",
+            "event_start_time_key" : "startTime",
+            "event_end_time_key" : "endTime",
+            "event_time_key" : "t",
+            "event_value_key" : "v",
+            "observed_time_chunk_size" : 1000,
+            "file_format" : "nc",
+            "aggregate" : [
+                {
+                    "$match" : {
+                        "moduleInstanceId" : "Preprocess_VT",
+                        "parameterId" : "VT",
+                        "qualifierId" : "[\"Total_Hydro_Min\"]",
+                        "encodedTimeStepId" : "DTOD_0TZ_CST"
+                    }
+                }
+            ],
+            "folder_overrides" : {
+                "moduleInstanceId" : "VT_MIN_HYDRO_Daily_Observed_VT"
+            },
+            "observed_start_time" : null,
+            "threads" : 8
+        }
+	]
+}
