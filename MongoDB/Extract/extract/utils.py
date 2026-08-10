@@ -13,11 +13,9 @@ def to_cardinal_time(t, time_step_minutes):
 	return date + timedelta(minutes=minutes)
 
 
-def get_folder_path(folder_overrides, aggregate, ensemble_id, time_step, timezone, file_format):
-	module_instance_id = folder_overrides.get("moduleInstanceId", aggregate[0]["$match"]["moduleInstanceId"])
-	parameter_id = folder_overrides.get("parameterId", aggregate[0]["$match"]["parameterId"])
-	qualifier_id = folder_overrides.get("qualifierId", "_".join(json.loads(aggregate[0]["$match"]["qualifierId"])))
-	return f'{module_instance_id}-{parameter_id}-{qualifier_id}-{ensemble_id}-{time_step}-{timezone}.{file_format}'
+def get_path(base, module_instance_id, parameter_id, qualifier_id, encoded_time_step_id, ensemble_id):
+	qualifier_id = "_".join(json.loads(qualifier_id))
+	return os.path.join(base, f'{module_instance_id}-{parameter_id}-{qualifier_id}-{encoded_time_step_id}-{ensemble_id}')
 
 
 def ensure_path(path):
@@ -31,17 +29,15 @@ def write_zarr(ds, path, file_format, encoding):
 	if os.path.exists(path) and os.listdir(path):
 		ds.to_zarr(path, mode="a", consolidated=False, zarr_format=zarr_format, append_dim="locationId")
 	else:
-		ds.to_zarr(path, mode="w", consolidated=False, zarr_format=zarr_format, encoding={"value": encoding})
+		ds.to_zarr(path, mode="w", consolidated=False, zarr_format=zarr_format, encoding=encoding)
 
 
-def write_netcdf(ds, path, location_id, ensemble_id, encoding):
-	parts = path.split(".")
-	ds.to_netcdf(os.path.join(path, f"{'.'.join(parts[:-1])}-{location_id}-{ensemble_id}.{parts[-1]}"), mode="w", encoding={"value": encoding})
+def write_netcdf(ds, path, location_id, encoding):
+	ds.to_netcdf(os.path.join(path, f"{location_id}.nc"), mode="w", encoding=encoding)
 
 
-def write_csv(ds, path, location_id, ensemble_id):
-	parts = path.split(".")
-	ds.reset_index().to_csv(os.path.join(path, f"{'.'.join(parts[:-1])}-{location_id}-{ensemble_id}.{parts[-1]}"), index=False)
+def write_csv(ds, path, location_id):
+	ds.reset_index().to_csv(os.path.join(path, f"{location_id}.csv"), index=False)
 
 
 def get_attrs(module_instance_id, parameter_id, qualifier_id, encoded_time_step_id, meta_data, event_time_key):

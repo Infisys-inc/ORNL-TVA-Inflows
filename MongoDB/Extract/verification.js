@@ -11,7 +11,6 @@ db.getCollection('Observed').find({}).forEach(f => { f["Filters"].forEach(t => {
 			"observed_time_chunk_size": 1000,
 			"file_format": "nc",
 			"aggregate": [{"$match": t["Filter"]}],
-			"folder_overrides": {"moduleInstanceId": `${f["Name"]}_${t["FilterName"]}`},
 			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
 			"threads": 16
 		});
@@ -26,7 +25,6 @@ db.getCollection('Forecast').find({}).forEach(f => { f["Filters"].forEach(t => {
 			"process": true,
 			"collection": f["Collection"],
 			"aggregate": [{"$match": t["Filter"]}],
-			"folder_overrides": {"moduleInstanceId": `${f["Name"]}_${t["FilterName"]}`},
 			"forecast_time_key": "forecastTime",
 			"event_time_key": "t",
 			"event_value_key": "v",

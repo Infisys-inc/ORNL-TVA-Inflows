@@ -1,54 +1,51 @@
 {
-	"connection": "mongodb://fews_admin:AvjgHB1zgtBS*T#@knxpwmongodb1.main.tva.gov:27017/?tls=true&authSource=admin",
-	"database": "FEWS_ARCHIVE",
-	"queries": [
+	"connection" : "mongodb://fews_admin:AvjgHB1zgtBS*T#@knxpwmongodb1.main.tva.gov:27017/?tls=true&authSource=admin",
+	"database" : "FEWS_ARCHIVE",
+	"queries" : [
 		{
-			"process": false,
-			"collection": "ExternalForecastingScalarTimeSeries",
-			"aggregate": [{"$match": {"moduleInstanceId": "RW_6Hour_To_FEWS", "parameterId": "VT", "qualifierId": "[\"Sim\"]", "encodedTimeStepId": "DTOD_0_6_12_18TZ_CST"}}],
-			"folder_overrides": {},
-			"forecast_time_key": "forecastTime",
-			"event_time_key": "t",
-			"event_value_key": "v",
-			"lead_time_days": 14,
-			"forecast_time_chunk_size": 1000,
-			"file_format": "nc",
-			"batch_size": 100,
-			"forecast_start_time": {"$date": "2017-01-01T00:00:00Z"},
-			"threads": 8
+			"process" : true,
+			"collection" : "ExternalForecastingScalarTimeSeries",
+			"aggregate" : [{"$match" : {"moduleInstanceId" : "RW_6Hour_To_FEWS", "parameterId" : "VT", "qualifierId" : "[\"Sim\"]", "encodedTimeStepId" : "DTOD_0_6_12_18TZ_CST"}}],
+			"forecast_time_key" : "forecastTime",
+			"event_time_key" : "t",
+			"event_value_key" : "v",
+			"lead_time_days" : 14,
+			"forecast_time_chunk_size" : 1000,
+			"file_format" : "nc",
+			"batch_size" : 100,
+			"forecast_start_time" : {"$date" : "2017-01-01T00:00:00Z"},
+			"threads" : 8
 		},
 		{
-			"process": false,
-			"collection": "SimulatedForecastingScalarTimeSeries",
-			"aggregate": [{"$match": {"parameterId":"QR", "moduleInstanceId": {"$in": ["ADJUSTQ_ALCT1_Forecast","ADJUSTQ_ARTT1_Forecast","ADJUSTQ_AVLN7_Forecast","ADJUSTQ_BARK2E_Forecast","ADJUSTQ_BIGT1_Forecast","ADJUSTQ_BIRN7_Forecast","ADJUSTQ_BLAN7_Forecast","ADJUSTQ_BLTN7_Forecast","ADJUSTQ_BNAA1_Forecast","ADJUSTQ_BRRT1_Forecast","ADJUSTQ_BRVG1_Forecast","ADJUSTQ_BSBA1_Forecast","ADJUSTQ_CAFT1_Forecast","ADJUSTQ_CDZK2_Forecast","ADJUSTQ_CEPN7_Forecast","ADJUSTQ_CHKT1_Forecast","ADJUSTQ_CHSA1_Forecast","ADJUSTQ_CKVT1N_Forecast","ADJUSTQ_CLVV2_Forecast","ADJUSTQ_CNVT1_Forecast","ADJUSTQ_COLT1_Forecast","ADJUSTQ_CTPN7_Forecast","ADJUSTQ_DOET1_Forecast","ADJUSTQ_EMBT1_Forecast","ADJUSTQ_EMGT1_Forecast","ADJUSTQ_ENGG1_Forecast","ADJUSTQ_FLCN7_Forecast","ADJUSTQ_FLTT1_Forecast","ADJUSTQ_FYTT1_Forecast","ADJUSTQ_GATV2_Forecast","ADJUSTQ_GERA1_Forecast","ADJUSTQ_HEPN7_Forecast","ADJUSTQ_HMLT1_Forecast","ADJUSTQ_HORT1_Forecast","ADJUSTQ_HSPN7_Forecast","ADJUSTQ_HWEG1_Forecast","ADJUSTQ_IRCT1_Forecast","ADJUSTQ_IVYN7_Forecast","ADJUSTQ_JNSV2_Forecast","ADJUSTQ_LBVT1_Forecast","ADJUSTQ_LLDT1_Forecast","ADJUSTQ_MARN7_Forecast","ADJUSTQ_MCGT1_Forecast","ADJUSTQ_MCST1_Forecast","ADJUSTQ_MLTT1_Forecast","ADJUSTQ_MYVT1_Forecast","ADJUSTQ_NEEN7_Forecast","ADJUSTQ_NOLT1_Forecast","ADJUSTQ_NRMT1_Forecast","ADJUSTQ_NWPT1_Forecast","ADJUSTQ_OAKT1_Forecast","ADJUSTQ_PLKT1_Forecast","ADJUSTQ_PORT1S_Forecast","ADJUSTQ_PORT1_Forecast","ADJUSTQ_PRTN7_Forecast","ADJUSTQ_PSPT1_Forecast","ADJUSTQ_RLRV2_Forecast","ADJUSTQ_ROSN7_Forecast","ADJUSTQ_RTRN7_Forecast","ADJUSTQ_SALV2_Forecast","ADJUSTQ_SEET1_Forecast","ADJUSTQ_SEVT1_Forecast","ADJUSTQ_SFYV2_Forecast","ADJUSTQ_SGWN7_Forecast","ADJUSTQ_SHVT1_Forecast","ADJUSTQ_SMFV2_Forecast","ADJUSTQ_TAZT1_Forecast","ADJUSTQ_TLRT1_Forecast","ADJUSTQ_TMFT1_Forecast","ADJUSTQ_TWNT1_Forecast","ADJUSTQ_VSTV2_Forecast","ADJUSTQ_WCKG1_Forecast","ADJUSTQ_WDVA1_Forecast","ADJUSTQ_WHTT1_Forecast"]}, "encodedTimeStepId":"DTOD_0_6_12_18TZ_CST", "qualifierId":"[\"Adj\"]"}}],
-			"folder_overrides": {"moduleInstanceId": "ADJUSTQ_Forecast"},
-			"forecast_time_key": "forecastTime",
-			"event_time_key": "t",
-			"event_value_key": "v",
-			"lead_time_days": 14,
-			"forecast_time_chunk_size": 1000,
-			"file_format": "nc",
-			"batch_size": 100,
-			"forecast_start_time": {"$date": "2017-01-01T00:00:00Z"},
-			"threads": 8
+			"process" : true,
+			"collection" : "SimulatedForecastingScalarTimeSeries",
+			"aggregate" : [{"$match" : {"parameterId":"QR", "moduleInstanceId" : {"$in" : ["ADJUSTQ_ALCT1_Forecast","ADJUSTQ_ARTT1_Forecast","ADJUSTQ_AVLN7_Forecast","ADJUSTQ_BARK2E_Forecast","ADJUSTQ_BIGT1_Forecast","ADJUSTQ_BIRN7_Forecast","ADJUSTQ_BLAN7_Forecast","ADJUSTQ_BLTN7_Forecast","ADJUSTQ_BNAA1_Forecast","ADJUSTQ_BRRT1_Forecast","ADJUSTQ_BRVG1_Forecast","ADJUSTQ_BSBA1_Forecast","ADJUSTQ_CAFT1_Forecast","ADJUSTQ_CDZK2_Forecast","ADJUSTQ_CEPN7_Forecast","ADJUSTQ_CHKT1_Forecast","ADJUSTQ_CHSA1_Forecast","ADJUSTQ_CKVT1N_Forecast","ADJUSTQ_CLVV2_Forecast","ADJUSTQ_CNVT1_Forecast","ADJUSTQ_COLT1_Forecast","ADJUSTQ_CTPN7_Forecast","ADJUSTQ_DOET1_Forecast","ADJUSTQ_EMBT1_Forecast","ADJUSTQ_EMGT1_Forecast","ADJUSTQ_ENGG1_Forecast","ADJUSTQ_FLCN7_Forecast","ADJUSTQ_FLTT1_Forecast","ADJUSTQ_FYTT1_Forecast","ADJUSTQ_GATV2_Forecast","ADJUSTQ_GERA1_Forecast","ADJUSTQ_HEPN7_Forecast","ADJUSTQ_HMLT1_Forecast","ADJUSTQ_HORT1_Forecast","ADJUSTQ_HSPN7_Forecast","ADJUSTQ_HWEG1_Forecast","ADJUSTQ_IRCT1_Forecast","ADJUSTQ_IVYN7_Forecast","ADJUSTQ_JNSV2_Forecast","ADJUSTQ_LBVT1_Forecast","ADJUSTQ_LLDT1_Forecast","ADJUSTQ_MARN7_Forecast","ADJUSTQ_MCGT1_Forecast","ADJUSTQ_MCST1_Forecast","ADJUSTQ_MLTT1_Forecast","ADJUSTQ_MYVT1_Forecast","ADJUSTQ_NEEN7_Forecast","ADJUSTQ_NOLT1_Forecast","ADJUSTQ_NRMT1_Forecast","ADJUSTQ_NWPT1_Forecast","ADJUSTQ_OAKT1_Forecast","ADJUSTQ_PLKT1_Forecast","ADJUSTQ_PORT1S_Forecast","ADJUSTQ_PORT1_Forecast","ADJUSTQ_PRTN7_Forecast","ADJUSTQ_PSPT1_Forecast","ADJUSTQ_RLRV2_Forecast","ADJUSTQ_ROSN7_Forecast","ADJUSTQ_RTRN7_Forecast","ADJUSTQ_SALV2_Forecast","ADJUSTQ_SEET1_Forecast","ADJUSTQ_SEVT1_Forecast","ADJUSTQ_SFYV2_Forecast","ADJUSTQ_SGWN7_Forecast","ADJUSTQ_SHVT1_Forecast","ADJUSTQ_SMFV2_Forecast","ADJUSTQ_TAZT1_Forecast","ADJUSTQ_TLRT1_Forecast","ADJUSTQ_TMFT1_Forecast","ADJUSTQ_TWNT1_Forecast","ADJUSTQ_VSTV2_Forecast","ADJUSTQ_WCKG1_Forecast","ADJUSTQ_WDVA1_Forecast","ADJUSTQ_WHTT1_Forecast"]}, "encodedTimeStepId":"DTOD_0_6_12_18TZ_CST", "qualifierId":"[\"Adj\"]"}}],
+			"forecast_time_key" : "forecastTime",
+			"event_time_key" : "t",
+			"event_value_key" : "v",
+			"lead_time_days" : 14,
+			"forecast_time_chunk_size" : 1000,
+			"file_format" : "nc",
+			"batch_size" : 100,
+			"forecast_start_time" : {"$date" : "2017-01-01T00:00:00Z"},
+			"threads" : 8
 		},
 		{
-			"process": false,
-			"collection": "SimulatedForecastingScalarTimeSeries",
-			"aggregate": [{"$match": {"parameterId":"QR", "moduleInstanceId": {"$in": ["ADJUSTQ_ALCT1_Forecast","ADJUSTQ_ARTT1_Forecast","ADJUSTQ_AVLN7_Forecast","ADJUSTQ_BARK2E_Forecast","ADJUSTQ_BIGT1_Forecast","ADJUSTQ_BIRN7_Forecast","ADJUSTQ_BLAN7_Forecast","ADJUSTQ_BLTN7_Forecast","ADJUSTQ_BNAA1_Forecast","ADJUSTQ_BRRT1_Forecast","ADJUSTQ_BRVG1_Forecast","ADJUSTQ_BSBA1_Forecast","ADJUSTQ_CAFT1_Forecast","ADJUSTQ_CDZK2_Forecast","ADJUSTQ_CEPN7_Forecast","ADJUSTQ_CHAT1_Forecast","ADJUSTQ_CHKT1_Forecast","ADJUSTQ_CHLT1_Forecast","ADJUSTQ_CHSA1_Forecast","ADJUSTQ_CKVT1N_Forecast","ADJUSTQ_CKVT1_Forecast","ADJUSTQ_CLVV2_Forecast","ADJUSTQ_CNVT1_Forecast","ADJUSTQ_COLT1_Forecast","ADJUSTQ_CPHT1_Forecast","ADJUSTQ_CRKT1_Forecast","ADJUSTQ_CTPN7_Forecast","ADJUSTQ_DECA1_Forecast","ADJUSTQ_DILN7_Forecast","ADJUSTQ_DOET1_Forecast","ADJUSTQ_DOVT1_Forecast","ADJUSTQ_EMBT1_Forecast","ADJUSTQ_EMGT1_Forecast","ADJUSTQ_ENGG1_Forecast","ADJUSTQ_EZBT1_Forecast","ADJUSTQ_FLCN7_Forecast","ADJUSTQ_FLTT1_Forecast","ADJUSTQ_FTCT1_Forecast","ADJUSTQ_FYTT1_Forecast","ADJUSTQ_GATV2_Forecast","ADJUSTQ_GERA1_Forecast","ADJUSTQ_HEPN7_Forecast","ADJUSTQ_HMLT1_Forecast","ADJUSTQ_HORT1_Forecast","ADJUSTQ_HRFT1_Forecast","ADJUSTQ_HSPN7_Forecast","ADJUSTQ_HURG1_Forecast","ADJUSTQ_HWEG1_Forecast","ADJUSTQ_ICCN7_Forecast","ADJUSTQ_IRCT1_Forecast","ADJUSTQ_IVYN7_Forecast","ADJUSTQ_JNSV2_Forecast","ADJUSTQ_KGTT1_Forecast","ADJUSTQ_KNOT1_Forecast","ADJUSTQ_LBVT1_Forecast","ADJUSTQ_LLDT1_Forecast","ADJUSTQ_MARN7_Forecast","ADJUSTQ_MCGT1_Forecast","ADJUSTQ_MCST1_Forecast","ADJUSTQ_MLTT1_Forecast","ADJUSTQ_MPHN7_Forecast","ADJUSTQ_MYVT1_Forecast","ADJUSTQ_NANN7_Forecast","ADJUSTQ_NEEN7_Forecast","ADJUSTQ_NEPT1_Forecast","ADJUSTQ_NJNT1_Forecast","ADJUSTQ_NOLT1_Forecast","ADJUSTQ_NWPT1_Forecast","ADJUSTQ_OAKT1_Forecast","ADJUSTQ_PLKT1_Forecast","ADJUSTQ_PORT1S_Forecast","ADJUSTQ_PORT1_Forecast","ADJUSTQ_PRTN7_Forecast","ADJUSTQ_PRVT1_Forecast","ADJUSTQ_PSPT1_Forecast","ADJUSTQ_RBYA1_Forecast","ADJUSTQ_RLRV2_Forecast","ADJUSTQ_ROSN7_Forecast","ADJUSTQ_RTRN7_Forecast","ADJUSTQ_SALV2_Forecast","ADJUSTQ_SAVT1_Forecast","ADJUSTQ_SCRA1_Forecast","ADJUSTQ_SEET1_Forecast","ADJUSTQ_SEVT1_Forecast","ADJUSTQ_SFYV2_Forecast","ADJUSTQ_SGWN7_Forecast","ADJUSTQ_SHVT1_Forecast","ADJUSTQ_SMFV2_Forecast","ADJUSTQ_SPTT1_Forecast","ADJUSTQ_TAZT1_Forecast","ADJUSTQ_THPN7_Forecast","ADJUSTQ_TKRN7_Forecast","ADJUSTQ_TKSN7_Forecast","ADJUSTQ_TLRT1_Forecast","ADJUSTQ_TMFT1_Forecast","ADJUSTQ_TWNT1_Forecast","ADJUSTQ_VSTV2_Forecast","ADJUSTQ_WCKG1_Forecast","ADJUSTQ_WDVA1_Forecast","ADJUSTQ_WHIA1_Forecast","ADJUSTQ_WHTT1_Forecast","ADJUSTQ_WLTN7_Forecast","Preprocess_QR_Kingston"]}, "encodedTimeStepId":"SETS60", "qualifierId":"[\"Adj\"]" }}],
-			"folder_overrides": {"moduleInstanceId": "ADJUSTQ_Forecast"},
-			"forecast_time_key": "forecastTime",
-			"event_time_key": "t",
-			"event_value_key": "v",
-			"lead_time_days": 14,
-			"forecast_time_chunk_size": 1000,
-			"file_format": "nc",
-			"batch_size": 100,
-			"forecast_start_time": {"$date": "2017-01-01T00:00:00Z"},
-			"threads": 16
+			"process" : true,
+			"collection" : "SimulatedForecastingScalarTimeSeries",
+			"aggregate" : [{"$match" : {"parameterId":"QR", "moduleInstanceId" : {"$in" : ["ADJUSTQ_ALCT1_Forecast","ADJUSTQ_ARTT1_Forecast","ADJUSTQ_AVLN7_Forecast","ADJUSTQ_BARK2E_Forecast","ADJUSTQ_BIGT1_Forecast","ADJUSTQ_BIRN7_Forecast","ADJUSTQ_BLAN7_Forecast","ADJUSTQ_BLTN7_Forecast","ADJUSTQ_BNAA1_Forecast","ADJUSTQ_BRRT1_Forecast","ADJUSTQ_BRVG1_Forecast","ADJUSTQ_BSBA1_Forecast","ADJUSTQ_CAFT1_Forecast","ADJUSTQ_CDZK2_Forecast","ADJUSTQ_CEPN7_Forecast","ADJUSTQ_CHAT1_Forecast","ADJUSTQ_CHKT1_Forecast","ADJUSTQ_CHLT1_Forecast","ADJUSTQ_CHSA1_Forecast","ADJUSTQ_CKVT1N_Forecast","ADJUSTQ_CKVT1_Forecast","ADJUSTQ_CLVV2_Forecast","ADJUSTQ_CNVT1_Forecast","ADJUSTQ_COLT1_Forecast","ADJUSTQ_CPHT1_Forecast","ADJUSTQ_CRKT1_Forecast","ADJUSTQ_CTPN7_Forecast","ADJUSTQ_DECA1_Forecast","ADJUSTQ_DILN7_Forecast","ADJUSTQ_DOET1_Forecast","ADJUSTQ_DOVT1_Forecast","ADJUSTQ_EMBT1_Forecast","ADJUSTQ_EMGT1_Forecast","ADJUSTQ_ENGG1_Forecast","ADJUSTQ_EZBT1_Forecast","ADJUSTQ_FLCN7_Forecast","ADJUSTQ_FLTT1_Forecast","ADJUSTQ_FTCT1_Forecast","ADJUSTQ_FYTT1_Forecast","ADJUSTQ_GATV2_Forecast","ADJUSTQ_GERA1_Forecast","ADJUSTQ_HEPN7_Forecast","ADJUSTQ_HMLT1_Forecast","ADJUSTQ_HORT1_Forecast","ADJUSTQ_HRFT1_Forecast","ADJUSTQ_HSPN7_Forecast","ADJUSTQ_HURG1_Forecast","ADJUSTQ_HWEG1_Forecast","ADJUSTQ_ICCN7_Forecast","ADJUSTQ_IRCT1_Forecast","ADJUSTQ_IVYN7_Forecast","ADJUSTQ_JNSV2_Forecast","ADJUSTQ_KGTT1_Forecast","ADJUSTQ_KNOT1_Forecast","ADJUSTQ_LBVT1_Forecast","ADJUSTQ_LLDT1_Forecast","ADJUSTQ_MARN7_Forecast","ADJUSTQ_MCGT1_Forecast","ADJUSTQ_MCST1_Forecast","ADJUSTQ_MLTT1_Forecast","ADJUSTQ_MPHN7_Forecast","ADJUSTQ_MYVT1_Forecast","ADJUSTQ_NANN7_Forecast","ADJUSTQ_NEEN7_Forecast","ADJUSTQ_NEPT1_Forecast","ADJUSTQ_NJNT1_Forecast","ADJUSTQ_NOLT1_Forecast","ADJUSTQ_NWPT1_Forecast","ADJUSTQ_OAKT1_Forecast","ADJUSTQ_PLKT1_Forecast","ADJUSTQ_PORT1S_Forecast","ADJUSTQ_PORT1_Forecast","ADJUSTQ_PRTN7_Forecast","ADJUSTQ_PRVT1_Forecast","ADJUSTQ_PSPT1_Forecast","ADJUSTQ_RBYA1_Forecast","ADJUSTQ_RLRV2_Forecast","ADJUSTQ_ROSN7_Forecast","ADJUSTQ_RTRN7_Forecast","ADJUSTQ_SALV2_Forecast","ADJUSTQ_SAVT1_Forecast","ADJUSTQ_SCRA1_Forecast","ADJUSTQ_SEET1_Forecast","ADJUSTQ_SEVT1_Forecast","ADJUSTQ_SFYV2_Forecast","ADJUSTQ_SGWN7_Forecast","ADJUSTQ_SHVT1_Forecast","ADJUSTQ_SMFV2_Forecast","ADJUSTQ_SPTT1_Forecast","ADJUSTQ_TAZT1_Forecast","ADJUSTQ_THPN7_Forecast","ADJUSTQ_TKRN7_Forecast","ADJUSTQ_TKSN7_Forecast","ADJUSTQ_TLRT1_Forecast","ADJUSTQ_TMFT1_Forecast","ADJUSTQ_TWNT1_Forecast","ADJUSTQ_VSTV2_Forecast","ADJUSTQ_WCKG1_Forecast","ADJUSTQ_WDVA1_Forecast","ADJUSTQ_WHIA1_Forecast","ADJUSTQ_WHTT1_Forecast","ADJUSTQ_WLTN7_Forecast","Preprocess_QR_Kingston"]}, "encodedTimeStepId":"SETS60", "qualifierId":"[\"Adj\"]" }}],
+			"forecast_time_key" : "forecastTime",
+			"event_time_key" : "t",
+			"event_value_key" : "v",
+			"lead_time_days" : 14,
+			"forecast_time_chunk_size" : 1000,
+			"file_format" : "nc",
+			"batch_size" : 100,
+			"forecast_start_time" : {"$date" : "2017-01-01T00:00:00Z"},
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -60,9 +57,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "HP_SixHour_Flowsheet_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -71,10 +65,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -86,9 +80,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "HP_SixHour_PreliminaryFlowsheet_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -97,10 +88,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -125,9 +116,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "HP_Hourly_RAS_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -136,10 +124,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -151,9 +139,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "HP_Hourly_NonPower_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -162,10 +147,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -177,9 +162,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "HP_Hourly_Ocoee_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -188,10 +170,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -280,9 +262,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_SixHour_ModifiedAdjusted_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -291,10 +270,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -347,9 +326,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_SixHour_ModifiedRaw_TOTAL"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -358,10 +334,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -442,9 +418,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_SixHour_ModifiedRaw_UNITHG"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -453,10 +426,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -509,9 +482,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_SixHour_Unmodified_TOTAL"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -520,10 +490,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -627,9 +597,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_SixHour_Unmodified_UNITHG"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -638,10 +605,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -653,9 +620,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_SixHour_LMRFC_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -664,10 +628,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -685,9 +649,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_Hourly_ModifiedAdjusted_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -696,10 +657,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -718,9 +679,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_Hourly_ModifiedRaw_TOTAL"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -729,10 +687,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -752,9 +710,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_Hourly_ModifiedRaw_UNITHG"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -763,10 +718,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -785,9 +740,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_Hourly_Unmodified_TOTAL"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -796,10 +748,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -819,9 +771,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_Hourly_Unmodified_UNITHG"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -830,10 +779,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -876,9 +825,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_Local_SixHour_ModifiedRaw_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -887,10 +833,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -933,9 +879,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_Local_SixHour_Unmodified_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -944,10 +887,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -978,9 +921,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_Local_Hourly_ModifiedRaw_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -989,10 +929,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1023,9 +963,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QR_Local_Hourly_Unmodified_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1034,10 +971,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1049,9 +986,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_SixHour_ECMWF_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1060,10 +994,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1075,9 +1009,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_SixHour_ML_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1086,10 +1017,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1101,9 +1032,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_SixHour_WPC_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1112,10 +1040,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1140,9 +1068,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_SixHour_Selected_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1151,10 +1076,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1166,9 +1091,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_HRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1177,10 +1099,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1192,9 +1114,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_ExtendedHRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1203,10 +1122,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1218,9 +1137,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_SixHour_Flowsheet_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1229,10 +1145,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1244,9 +1160,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_SixHour_PreliminaryFlowsheet_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1255,10 +1168,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1270,9 +1183,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_SixHour_Cumberland_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1281,10 +1191,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1296,9 +1206,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_Hourly_Ocoee_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1307,10 +1214,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1322,9 +1229,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_Hourly_Preschedule_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1333,10 +1237,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1348,9 +1252,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_Hourly_RaccoonMountain_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1359,10 +1260,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1374,9 +1275,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_Hourly_RawPreschedule_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1385,10 +1283,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1400,9 +1298,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_TOTAL_HYDRO_Daily_Flowsheet_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1411,10 +1306,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1426,9 +1321,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_TOTAL_SEPA_Hourly_ImportSEPA_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1437,10 +1329,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1452,9 +1344,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QT_SixHour_Flowsheet_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1463,10 +1352,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1478,9 +1367,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QT_SixHour_PreliminaryFlowsheet_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1489,10 +1375,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1504,9 +1390,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QT_SixHour_Cumberland_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1515,10 +1398,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "SimulatedForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1543,9 +1426,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QT_Hourly_RAS_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1554,10 +1434,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1569,9 +1449,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QT_Hourly_NonPower_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1580,10 +1457,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1595,9 +1472,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QT_Hourly_Ocoee_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1606,10 +1480,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1621,9 +1495,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QT_Hourly_Preschedule_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1632,10 +1503,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1647,9 +1518,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QT_Hourly_RawPreschedule_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1658,10 +1526,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1673,9 +1541,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QT_Hourly_Brookfield_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1684,10 +1549,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1699,9 +1564,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "QT_Hourly_Duke_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1710,10 +1572,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -1868,9 +1730,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_Basins_HRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -1879,10 +1738,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2037,9 +1896,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_Basins_ExtendedHRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2048,10 +1904,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2114,9 +1970,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_Total_Local_HRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2125,10 +1978,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2191,9 +2044,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_Total_Local_ExtendedHRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2202,10 +2052,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2227,9 +2077,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_Region_ExtendedHRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2238,10 +2085,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2267,9 +2114,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_Group_ExtendedHRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2278,10 +2122,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2301,9 +2145,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_Zone_ExtendedHRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2312,10 +2153,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2337,9 +2178,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_Region_HRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2348,10 +2186,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2377,9 +2215,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_Group_HRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2388,10 +2223,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2411,9 +2246,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_Hourly_Zone_HRRR_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2422,10 +2254,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2437,9 +2269,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_TOTAL_HYDRO_Daily_LongTerm_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2448,10 +2277,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2463,9 +2292,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_MAX_HYDRO_Daily_LongTerm_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2474,10 +2300,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2489,9 +2315,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_MAX_HYDRO_Daily_Flowsheet_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2500,10 +2323,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2515,9 +2338,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_MAX_HYDRO_Daily_POInput_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2526,10 +2346,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2541,9 +2361,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_MIN_HYDRO_Daily_POInput_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2552,10 +2369,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2567,9 +2384,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_MIN_HYDRO_Daily_LongTerm_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2578,10 +2392,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2593,9 +2407,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "VT_MIN_HYDRO_Daily_Flowsheet_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2604,10 +2415,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2619,9 +2430,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_SixHour_95MAX_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2630,10 +2438,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2645,9 +2453,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_SixHour_GraphCastGFS_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2656,10 +2461,10 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		},
 		{
-			"process" : false,
+			"process" : true,
 			"collection" : "ExternalForecastingScalarTimeSeries",
 			"aggregate" : [
 				{
@@ -2671,9 +2476,6 @@
 					}
 				}
 			],
-			"folder_overrides" : {
-				"moduleInstanceId" : "MAP_SixHour_NBM_Default"
-			},
 			"forecast_time_key" : "forecastTime",
 			"event_time_key" : "t",
 			"event_value_key" : "v",
@@ -2682,7 +2484,7 @@
 			"file_format" : "nc",
 			"batch_size" : 100,
 			"forecast_start_time" : null,
-			"threads" : 16
+			"threads" : 8
 		}
 	]
 }

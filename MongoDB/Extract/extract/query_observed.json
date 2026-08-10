@@ -3,7 +3,7 @@
 	"database": "FEWS_ARCHIVE",
 	"queries": [
 		{
-			"process": false,
+			"process": true,
 			"collection": "ExternalHistoricalScalarTimeSeries",
 			"event_start_time_key": "startTime",
 			"event_end_time_key": "endTime",
@@ -12,12 +12,11 @@
 			"observed_time_chunk_size": 1000,
 			"file_format": "nc",
 			"aggregate": [{"$match": {"moduleInstanceId": "Preprocess_HG_to_QR", "parameterId": "QR", "qualifierId": "[]", "encodedTimeStepId": "SETS60"}}],
-			"folder_overrides": {},
-			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
+			"observed_start_time": null,
 			"threads": 16
 		},
 		{
-			"process": false,
+			"process": true,
 			"collection": "ExternalHistoricalScalarTimeSeries",
 			"event_start_time_key": "startTime",
 			"event_end_time_key": "endTime",
@@ -26,12 +25,11 @@
 			"observed_time_chunk_size": 1000,
 			"file_format": "nc",
 			"aggregate": [{"$match": {"moduleInstanceId": "Preprocess_HG_to_QR", "parameterId": "HG", "qualifierId": "[]", "encodedTimeStepId": "SETS60"}}],
-			"folder_overrides": {},
-			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
+			"observed_start_time": null,
 			"threads": 16
 		},
 		{
-			"process": false,
+			"process": true,
 			"collection": "ExternalHistoricalScalarTimeSeries",
 			"event_start_time_key": "startTime",
 			"event_end_time_key": "endTime",
@@ -40,12 +38,11 @@
 			"observed_time_chunk_size": 1000,
 			"file_format": "nc",
 			"aggregate": [{"$match": {"moduleInstanceId": "QPE_to_MAP", "parameterId": "MAP", "qualifierId": "[]", "encodedTimeStepId": "SETS60"}}],
-			"folder_overrides": {},
-			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
+			"observed_start_time": null,
 			"threads": 16
 		},
 		{
-			"process": false,
+			"process": true,
 			"collection": "ExternalHistoricalScalarTimeSeries",
 			"event_start_time_key": "startTime",
 			"event_end_time_key": "endTime",
@@ -54,12 +51,11 @@
 			"observed_time_chunk_size": 1000,
 			"file_format": "nc",
 			"aggregate": [{"$match": {"moduleInstanceId": "Preprocess_QT", "parameterId": "QT", "qualifierId": "[]", "encodedTimeStepId": "SETS60"}}],
-			"folder_overrides": {},
-			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
+			"observed_start_time": null,
 			"threads": 16
 		},
 		{
-			"process": false,
+			"process": true,
 			"collection": "ExternalHistoricalScalarTimeSeries",
 			"event_start_time_key": "startTime",
 			"event_end_time_key": "endTime",
@@ -68,8 +64,7 @@
 			"observed_time_chunk_size": 1000,
 			"file_format": "nc",
 			"aggregate": [{"$match": {"moduleInstanceId": "Preprocess_QT", "parameterId": "QT", "qualifierId": "[]", "encodedTimeStepId": "DTOD_0_6_12_18TZ_CST"}}],
-			"folder_overrides": {},
-			"observed_start_time": {"$date": "2017-01-01T00:00:00Z"},
+			"observed_start_time": null,
 			"threads": 16
 		},
 		{
@@ -91,9 +86,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "HP_SixHour_Observed_Default"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -116,9 +108,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "HP_Hourly_Observed_Default"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -141,9 +130,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "QR_SixHour_Observed_HG_to_QR"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -166,9 +152,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "QR_SixHour_Observed_QI"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -191,9 +174,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "QR_Hourly_Observed_HG_to_QR"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -216,9 +196,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "QR_Hourly_Observed_QI"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -308,9 +285,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "QR_Local_SixHour_Observed_Default"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -371,9 +345,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "QR_Local_Hourly_Observed_Default"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -396,34 +367,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "MAP_SixHour_Observed_Default"
-            },
-            "observed_start_time" : null,
-            "threads" : 8
-        },
-        {
-            "process" : true,
-            "collection" : "ExternalHistoricalScalarTimeSeries",
-            "event_start_time_key" : "startTime",
-            "event_end_time_key" : "endTime",
-            "event_time_key" : "t",
-            "event_value_key" : "v",
-            "observed_time_chunk_size" : 1000,
-            "file_format" : "nc",
-            "aggregate" : [
-                {
-                    "$match" : {
-                        "moduleInstanceId" : "QPE_to_MAP",
-                        "parameterId" : "MAP",
-                        "qualifierId" : "[]",
-                        "encodedTimeStepId" : "SETS60"
-                    }
-                }
-            ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "MAP_Hourly_Observed_Default"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -446,9 +389,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "VT_SixHour_Observed_Default"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -471,9 +411,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "VT_Hourly_Observed_Default"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -496,9 +433,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "VT_TOTAL_HYDRO_Daily_Observed_VT"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -521,9 +455,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "VT_TOTAL_SEPA_Hourly_Observed_Default"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -546,9 +477,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "QT_SixHour_Observed_Default"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -571,9 +499,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "QT_Hourly_Observed_Default"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -596,9 +521,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "VT_MAX_HYDRO_Daily_Observed_VT"
-            },
             "observed_start_time" : null,
             "threads" : 8
         },
@@ -621,9 +543,6 @@
                     }
                 }
             ],
-            "folder_overrides" : {
-                "moduleInstanceId" : "VT_MIN_HYDRO_Daily_Observed_VT"
-            },
             "observed_start_time" : null,
             "threads" : 8
         }
