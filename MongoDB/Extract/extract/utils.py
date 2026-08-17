@@ -31,11 +31,10 @@ def ensure_path(path, resume=False):
 
 
 def write_zarr(ds, path, file_format, encoding):
-	zarr_format = 3 if file_format == "zarr3" else 2
 	if os.path.exists(path) and os.listdir(path):
-		ds.to_zarr(path, mode="a", consolidated=False, zarr_format=zarr_format, append_dim="locationId")
+		ds.to_zarr(path, mode="a", consolidated=False, zarr_format=3, append_dim="locationId")
 	else:
-		ds.to_zarr(path, mode="w", consolidated=False, zarr_format=zarr_format, encoding=encoding)
+		ds.to_zarr(path, mode="w", consolidated=False, zarr_format=3, encoding=encoding)
 
 
 def write_netcdf(ds, path, location_id, encoding):
