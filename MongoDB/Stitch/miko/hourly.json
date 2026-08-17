@@ -1,54 +1,54 @@
 {
 	"data_root": "d:\\DATA",
 	"timestep_hours": 1,
-	"lead_hours": 24,
-	"forward_fill_hours": 24,
+	"lead_hours": 46,
+	"forward_fill_hours": 0,
 	"locations": {
 		"SMFV2": [
-			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
+			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
 				{"forecast": "ADJUSTQ_SMFV2_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "1"},
 				{"forecast": "ADJUSTQ_SMFV2_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "ML"}]], "aggregation": "mean", "n": 6},
-			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
+			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
 				{"forecast": "QPF_to_MAP-MAP-HRRR-SETS60-", "ensemble_member": ""},
 				{"forecast": "QPF_to_MAP-MAP-Extended_HRRR-SETS60-", "ensemble_member": ""}]], "aggregation": "sum", "n": 6}
 		],
 		"SALV2": [
-			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
+			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
 				{"forecast": "ADJUSTQ_SALV2_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "1"},
 				{"forecast": "ADJUSTQ_SALV2_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "ML"}]], "aggregation": "mean", "n": 6},
-			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
+			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
 				{"forecast": "QPF_to_MAP-MAP-HRRR-SETS60-", "ensemble_member": ""},
 				{"forecast": "QPF_to_MAP-MAP-Extended_HRRR-SETS60-", "ensemble_member": ""}]], "aggregation": "sum", "n": 6}
 		],
 		"GATV2": [
-			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
+			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
 				{"forecast": "ADJUSTQ_GATV2_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "1"},
 				{"forecast": "ADJUSTQ_GATV2_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "ML"}]], "aggregation": "mean", "n": 6},
-			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
+			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
 				{"forecast": "QPF_to_MAP-MAP-HRRR-SETS60-", "ensemble_member": ""},
 				{"forecast": "QPF_to_MAP-MAP-Extended_HRRR-SETS60-", "ensemble_member": ""}]], "aggregation": "sum", "n": 6}
 		],
 		"CLVV2": [
-			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
+			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
 				{"forecast": "ADJUSTQ_CLVV2_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "1"},
 				{"forecast": "ADJUSTQ_CLVV2_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "ML"}]], "aggregation": "mean", "n": 6},
-			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
+			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
 				{"forecast": "QPF_to_MAP-MAP-HRRR-SETS60-", "ensemble_member": ""},
 				{"forecast": "QPF_to_MAP-MAP-Extended_HRRR-SETS60-", "ensemble_member": ""}]], "aggregation": "sum", "n": 6}
 		],
 		"VSTV2": [
-			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
+			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
 				{"forecast": "ADJUSTQ_VSTV2_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "1"},
 				{"forecast": "ADJUSTQ_VSTV2_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "ML"}]], "aggregation": "mean", "n": 6},
-			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
+			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
 				{"forecast": "QPF_to_MAP-MAP-HRRR-SETS60-", "ensemble_member": ""},
 				{"forecast": "QPF_to_MAP-MAP-Extended_HRRR-SETS60-", "ensemble_member": ""}]], "aggregation": "sum", "n": 6}
 		],
 		"SGWN7": [
-			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
+			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
 				{"forecast": "ADJUSTQ_SGWN7_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "1"},
 				{"forecast": "ADJUSTQ_SGWN7_Forecast-QR-Adj-SETS60-ALLQPF", "ensemble_member": "ML"}]], "aggregation": "mean", "n": 6},
-			{"observed": "Preprocess_HG_to_QR-QR--SETS60-", "forecasts": [[
+			{"observed": "QPE_to_MAP-MAP--SETS60-", "forecasts": [[
 				{"forecast": "QPF_to_MAP-MAP-HRRR-SETS60-", "ensemble_member": ""},
 				{"forecast": "QPF_to_MAP-MAP-Extended_HRRR-SETS60-", "ensemble_member": ""}]], "aggregation": "sum", "n": 6}
 		]
