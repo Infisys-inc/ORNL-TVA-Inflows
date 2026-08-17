@@ -1,6 +1,7 @@
 import re
 import utils
 import pymongo
+import keyring
 
 import numpy as np
 import xarray as xr
@@ -9,11 +10,13 @@ import multiprocessing as mp
 
 from bson import json_util
 from datetime import timedelta
+from urllib.parse import quote_plus
 
 def main():
 	lock = mp.Manager().Lock()
 	with open(__file__.replace('.py', '.json'), "r") as r:
 		config = json_util.loads(r.read())
+	config["connection"] = config["connection"].format(password=quote_plus(keyring.get_password("MongoDB", "fews_admin")))
 
 	for query in config["queries"]:
 		parameters = get_parameters(config, query, lock)

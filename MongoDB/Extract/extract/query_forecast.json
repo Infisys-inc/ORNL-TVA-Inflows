@@ -1,5 +1,5 @@
 {
-  "connection": "mongodb://fews_admin:AvjgHB1zgtBS*T#@knxpwmongodb1.main.tva.gov:27017/?tls=true&authSource=admin",
+  "connection": "mongodb://fews_admin:{password}@knxpwmongodb1.main.tva.gov:27017/?tls=true&authSource=admin",
   "database": "FEWS_ARCHIVE",
   "queries": [
     {

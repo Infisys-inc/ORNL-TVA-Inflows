@@ -2,3 +2,5 @@ numpy
 pandas
 pymongo
 xarray
+keyring
+netCDF4
