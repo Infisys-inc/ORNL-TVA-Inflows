@@ -3,7 +3,8 @@ import json
 import xarray as xr
 
 
-with open('hourly.json', 'r') as r:
+with open('six_hour.json', 'r') as r:
+# with open('hourly.json', 'r') as r:
 	config = json.load(r)
 
 locations = config['locations']
@@ -18,7 +19,8 @@ def main():
 		observed_data = [get_observed_data(location, m['observed']) for m in measures]
 		forecast_data = [get_forecasts_data(location, forecasts, m['n'], m['aggregation']) for m in measures for forecasts in m['forecasts']]
 		if observed_data:
-			write(observed_data, forecast_data, location)
+			combined = combine(observed_data, forecast_data)
+			write(combined, location)
 
 
 def get_forecasts_data(location, forecast, n, aggregation):
@@ -52,7 +54,7 @@ def ffill(da):
 	filled = da.copy()
 	other_dims = [d for d in da.dims if d != "forecastTime"]
 
-	for age in range(1, forward_fill_hours // timestep_hours + 1):
+	for age in range(1, forward_fill_hours // timestep_hours + 1, timestep_hours):
 		candidates = da.shift(forecastTime=age, leadTime=-age)
 		replace_rows = filled.isnull().all(dim=other_dims) & candidates.notnull().any(dim=other_dims)
 		filled = filled.where(~replace_rows, candidates)
@@ -60,12 +62,16 @@ def ffill(da):
 	return filled.sel(leadTime=da['leadTime'] <= lead_hours * 60)
 
 
-def write(observed_data, forecast_data, location):
-	result = xr.merge(observed_data, join='inner', combine_attrs='drop')
-	result = result.dropna(dim='eventTime', how='any')
-	result = xr.merge([result, *forecast_data], join='left', combine_attrs='drop')
-	result['eventTime'].encoding.clear()
-	result.to_netcdf(os.path.join(data_root, f'{location}_{timestep_hours}h.nc'))
+def combine(observed_data, forecast_data):
+	observed = xr.merge(observed_data, join='inner', combine_attrs='drop')
+	observed = observed.dropna(dim='eventTime', how='any')
+	combined = xr.merge([observed, *forecast_data], join='left', combine_attrs='drop')
+	combined['eventTime'].encoding.clear()
+	return combined
+
+
+def write(combined, location):
+	combined.to_netcdf(os.path.join(data_root, f'{location}_{timestep_hours}h.nc'))
 
 
 def aggregate(forecast_data, n, aggregation):

@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/_src/_002_readdata" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/_src/_003_ml_f" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="ornl" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="inflow" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

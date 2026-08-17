@@ -1,0 +1,15 @@
+{
+	"data_root": "d:\\DATA\\Observed",
+	"timestep_hours": 6,
+	"folders": [
+		"QPE_to_MAP-MAP--DTOD_0_6_12_18TZ_CST-",
+		"Preprocess_HP-HP--DTOD_0_6_12_18TZ_CST-",
+		"Preprocess_QI-QI--DTOD_0_6_12_18TZ_CST-",
+		"Preprocess_QT-QT--DTOD_0_6_12_18TZ_CST-",
+		"Preprocess_HT-HT--DTOD_0_6_12_18TZ_CST-",
+		"Preprocess_HP_to_LS-LS--DTOD_0_6_12_18TZ_CST-",
+		"Preprocess_HG_to_QR-HG--DTOD_0_6_12_18TZ_CST-",
+		"Preprocess_HG_to_QR-QR--DTOD_0_6_12_18TZ_CST-",
+		"LOCAL_*_Observed-QR-Loc-DTOD_0_6_12_18TZ_CST-"
+	]
+}
