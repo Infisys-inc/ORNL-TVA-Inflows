@@ -1,0 +1,45 @@
+RiverSystem	DamID	DamName	IsHeadwater	LocalBasin	UpstreamDams	Tributaries	Notes
+Bear	CCRA1	Cedar @ Cedar Creek Dam	Yes	CCRA1
+Bear	LBRA1	Little Bear @ Little Bear Creek Dam	Yes	LBRA1
+Bear	UBRA1	Upper Bear @ Upper Bear Creek Dam	Yes	UBRA1
+Bear	BCRA1	Bear @ Bear Creek Dam	No	BCRA1	UBRA1
+Clinch Powell	NRST1	Clinch @ Norris Dam	No	NRST1		ARTT1,TAZI1
+Clinch Powell	MHDT1	Clinch @ Melton Dam	No	MHDT1	NRST1
+Duck Elk Caney Fork	TMFT1	Elk @ Tims Ford Dam	Yes	TMFT1
+Duck Elk Caney Fork	NRMT1	Duck @ Normandy Dam	No	NRMT1		MCST1
+French Broad	NOLT1	Nolichucky @ Nolichucky Dam	No	NOLT1		MCGT1,CAFT1
+French Broad	WLTN7	Pigeon @ Walters Dam	No	WLTN7		EMBT1
+French Broad	DUGT1	French Broad @ Douglas Dam	No	DUGT1		HEPN7
+Hiwassee	CHAN7	Hiwassee @ Chatuge Dam	No	CHAN7		LLDT1,NWPT1,NEPT1
+Hiwassee	NOTG1	Nottely @ Nottely Dam	No	NOTG1		HWEG1
+Hiwassee	HIWN7	Hiwassee @ Hiwassee Dam	No	HIWN7		BRVG1
+Hiwassee	HADT1	Hiwassee @ Apalachia Dam	No	HADT1	NOTG1	MPHN7
+Holston	WTGT1	Watauga @ Watauga Dam	No	WTGT1	HIWN7
+Holston	BOOT1	SF Holston @ Boone Dam	No	BOOT1		SGWN7
+Holston	FPHT1	SF Holston @ Ft Patrick Henry Dam	No	FPHT1	SHDT1	EZBT1
+Holston	JSST1	Holston @ John Sevier Dam	No	JSST1	BOOT1
+Holston	CRKT1	Holston @ Cherokee Dam	No	CRKT1	FPTH1	GATV2
+Holston	VSTV2	SF Holston @ Damascus	Yes	VSTV2	JSST1
+Holston	SHDT1	SF Holston @ South Holston Dam	No	SHDT1		SMFV2,VSTV2
+Kentucky Barkley	KYDK2	Tennessee @ Kentucky Dam	No	KYDK2		NJMT1,BIGT1
+Kentucky Barkley	BARK2	Cumberland @ Barkley Dam	No	BARK2		DOVT1,BARK2E
+Little Tennessee	ICCN7	Tuckasegee @ Cedar Cliff Dam	Yes	ICCN7
+Little Tennessee	THPN7	WF Tuckasegee @ Thorpe Dam	Yes	THPN7
+Little Tennessee	NANN7	Nantahala @ Nantahala Dam	Yes	NANN7
+Little Tennessee	FONN7	Little Tennessee @ Fontana Dam	No	FONN7	NANN7	TKSN7,NEEN7
+Little Tennessee	SNTN7	Cheoah @ Santeetlah Dam	Yes	SNTN7
+Little Tennessee	CHEN7	Little Tennessee @ Cheoah Dam	No	CHEN7	FONN7,SNTN7_QG		Generation flow routed from Santeelah to Cheoah using a pipe
+Little Tennessee	CALT1	Little Tennessee @ Calderwood Dam	No	CALT1	CHEN7,SNTN7_QS		Spill flow routed from Santeelah to Calderwood through river channel
+Little Tennessee	CLTT1	Little Tennessee @ Chilhowee Dam	No	CLTT1	CALT1	CALT1
+Mainstem Tennessee	WHLA1	Tennessee @ Wheeler Dam	No	WHLA1		PSPT1,DECA1
+Mainstem Tennessee	WLSA1	Tennessee @ Wilson Dam	No	WLSA1	WHLA1	IRCT1,BNAA1
+Mainstem Tennessee	PICT1	Tennessee @ Pickwick Dam	No	PICT1	WLSA1,CCRA1,LBRA1	RBYA1
+Mainstem Tennessee	FLDT1	Tennessee @ Ft Loundon Dam	No	FLDT1	CLTT1	KNOT1,ALCT1,TLRT1
+Mainstem Tennessee	TDTT1	Little Tennessee @ Tellico Dam	Yes	TDTT1
+Mainstem Tennessee	WBOT1	Tennessee @ Watts Bar Dam	No	WBOT1	MHDT1	OAKT1,KGTT1
+Mainstem Tennessee	CKDT1	Tennessee @ Chickamauga Dam	No	CKDT1	WBOT1	SEET1,CHLT1
+Mainstem Tennessee	NKJT1	Tennessee @ Nickajack Dam	No	NKJT1		CJAT1,ENGC1,RACT1	Net Q (parameterID) from Racoon Mountain Pumped Storage (RACT1)
+Mainstem Tennessee	GVDA1	Tennessee @ Guntersville Dam	No	GVDA1		SCRA1,GERA1
+Ocoee	BRDG1	Toccoa @ Blue Ridge Dam	No	BRDG1		HURG1
+Ocoee	OCCT1	Ocoee @ Dam #3	No	OCCT1		CPHT1,FTCT1
+Ocoee	OCAT1	Ocoee @ Dam #1	No	OCAT1	OCCT1

@@ -1,0 +1,39 @@
+{
+	"data_root": "d:\\DATA\\Observed",
+	"timesteps": [
+		{
+			"timestep_hours": 1,
+			"upstream_dams_flow_folder": "Preprocess_QT-QT--SETS60-",
+			"tributaries_flow_folder": "Preprocess_HG_to_QR-QR--SETS60-",
+			"folders": [
+				"QPE_to_MAP-MAP--SETS60-",
+				"Preprocess_HP-HP--SETS60-",
+				"Preprocess_QI-QI--SETS60-",
+				"Preprocess_QT-QT--SETS60-",
+				"Preprocess_HT-HT--SETS60-",
+				"Preprocess_HP_to_LS-LS--SETS60-",
+				"Preprocess_HP_to_LS-LS-2D-SETS60-",
+				"Preprocess_HP_to_LS-LS-Total-SETS60-",
+				"Preprocess_HG_to_QR-HG--SETS60-",
+				"Preprocess_HG_to_QR-QR--SETS60-",
+				"LOCAL_*_Observed-QR-Loc-SETS60-"
+			]
+		},
+		{
+			"timestep_hours": 6,
+			"upstream_dams_flow_folder": "Preprocess_QT-QT--DTOD_0_6_12_18TZ_CST-",
+			"tributaries_flow_folder": "Preprocess_HG_to_QR-QR--DTOD_0_6_12_18TZ_CST-",
+			"folders": [
+				"QPE_to_MAP-MAP--DTOD_0_6_12_18TZ_CST-",
+				"Preprocess_HP-HP--DTOD_0_6_12_18TZ_CST-",
+				"Preprocess_QI-QI--DTOD_0_6_12_18TZ_CST-",
+				"Preprocess_QT-QT--DTOD_0_6_12_18TZ_CST-",
+				"Preprocess_HT-HT--DTOD_0_6_12_18TZ_CST-",
+				"Preprocess_HP_to_LS-LS--DTOD_0_6_12_18TZ_CST-",
+				"Preprocess_HG_to_QR-HG--DTOD_0_6_12_18TZ_CST-",
+				"Preprocess_HG_to_QR-QR--DTOD_0_6_12_18TZ_CST-",
+				"LOCAL_*_Observed-QR-Loc-DTOD_0_6_12_18TZ_CST-"
+			]
+		}
+	]
+}

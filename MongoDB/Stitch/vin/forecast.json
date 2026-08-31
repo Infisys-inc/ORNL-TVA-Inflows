@@ -1,0 +1,37 @@
+{
+	"data_root": "d:\\DATA\\Forecast",
+	"timesteps": [
+
+		{
+			"timestep_hours": 6,
+			"upstream_dams_flow_folder": "RW_6Hour_To_FEWS-QT-Sim-DTOD_0_6_12_18TZ_CST-",
+			"tributaries_flow_folder": "TOTAL_*_Forecast-QR-Sim-DTOD_0_6_12_18TZ_CST-",
+			"folders": [
+				"MergeMAP_*_Forecast-MAP--DTOD_0_6_12_18TZ_CST-",
+				"LAGK_*_Forecast-QR-Rtd_Sim-DTOD_0_6_12_18TZ_CST-",
+				"SUM_LAGK_*_Forecast-QR-Rtd_Sim-DTOD_0_6_12_18TZ_CST-",
+				"TOTAL_*_Forecast-QR-Sim-DTOD_0_6_12_18TZ_CST-",
+				"ADJUSTQ_*_Forecast-QR-Adj-DTOD_0_6_12_18TZ_CST-",
+				"RW_6Hour_To_FEWS-HP-Sim-DTOD_0_6_12_18TZ_CST-",
+				"RW_6Hour_To_FEWS-HT-Sim-DTOD_0_6_12_18TZ_CST-",
+				"RW_6Hour_To_FEWS-QT-Sim-DTOD_0_6_12_18TZ_CST-",
+				"RW_6Hour_To_FEWS-QI-Sim-DTOD_0_6_12_18TZ_CST-",
+				"UNITHG_ADJ_*_Forecast-QR-Loc_Sim-DTOD_0_6_12_18TZ_CST-"
+			]
+		},
+		{
+			"timestep_hours": 1,
+			"upstream_dams_flow_folder": "RW_Hourly_To_FEWS-QT--SETS60-",
+			"tributaries_flow_folder": "TOTAL_*_Forecast-QR-Sim-SETS60-",
+			"folders": [
+				"MergeMAP_*_Forecast-MAP--SETS60-",
+				"LAGK_*_Forecast-QR-Rtd_Sim-SETS60-",
+				"SUM_LAGK_*_Forecast-QR-Rtd_Sim-SETS60-",
+				"TOTAL_*_Forecast-QR-Sim-SETS60-",
+				"ADJUSTQ_*_Forecast-QR-Adj-SETS60-",
+				"RW_Hourly_To_FEWS-QT--SETS60-",
+				"UNITHG_*_Forecast-QR-Loc_Sim-SETS60-"
+			]
+		}
+	]
+}

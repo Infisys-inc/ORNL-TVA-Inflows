@@ -1,0 +1,42 @@
+folder	long_name	description
+^LOCAL_.+_Observed-QR-Loc-DTOD_0_6_12_18TZ_CST-$	Estimated Local Flow	Local flow contributing to reservoir inflow during the observed period.
+^LOCAL_.+_Observed-QR-Loc-SETS60-$	Estimated Local Flow	Local flow contributing to reservoir inflow during the observed period. It is calculated as Downstream Observed Reservoir Inflow (QI) − Sum of Routed Flows from Upstream Basins. This provides an observed estimate of local basin contribution that can be compared with the simulated local QR
+^Preprocess_HG_to_QR-HG--DTOD_0_6_12_18TZ_CST-$	River Stage	Observed river stage measured at a streamflow gage.
+^Preprocess_HG_to_QR-HG--SETS60-$	River Stage	Observed river stage measured at a streamflow gage.
+^Preprocess_HG_to_QR-QR--DTOD_0_6_12_18TZ_CST-$	River Flow	Streamflow calculated from observed river stage using a stage-discharge rating curve.
+^Preprocess_HG_to_QR-QR--SETS60-$	River Flow	Streamflow calculated from observed river stage using a stage-discharge rating curve.
+^Preprocess_HP_to_LS-LS-00CST-DTOD_0TZ_CST-$
+^Preprocess_HP_to_LS-LS-2D-SETS60-$	Reservoir Storage (Sloped)	Reservoir storage interpolated using the upstream and downstream elevations and their corresponding storage relationship
+^Preprocess_HP_to_LS-LS-Changed-SETS60-$
+^Preprocess_HP_to_LS-LS--DTOD_0_6_12_18TZ_CST-$	Reservoir Storage (Flat)	Reservoir storage interpolated from the headwater elevation–storage relationship.
+^Preprocess_HP_to_LS-LS--DTOD_0TZ_CST-$
+^Preprocess_HP_to_LS-LS--SETS60-$	Reservoir Storage (Flat)	Reservoir storage interpolated from the headwater elevation–storage relationship.
+^Preprocess_HP_to_LS-LS-Total-SETS60-$	Total Reservoir Storage (Sloped)	Sum of the storage contributions from component locations used in the slope-accounting calculation. For example, total storage for Barkley Reservoir is calculated by summing the Slope Accounting Storage for Barkley (BARK2), Cumberland at Clarksville (CKVT1), and Cumberland at Dover (DOVT1).
+^Preprocess_HP-HP_2--SETS60-$	Secondary Headwater at Dam
+^Preprocess_HP-HP-00CST-DTOD_0TZ_CST-$
+^Preprocess_HP-HP-Diversion-SETS60-$
+^Preprocess_HP-HP--DTOD_0_6_12_18TZ_CST-$	Dam Headwater Elevation	Observed water-surface elevation on the above side of the dam.
+^Preprocess_HP-HP-Editable-SETS60-$
+^Preprocess_HP-HP--SETS60-$	Dam Headwater Elevation	Observed water-surface elevation above the dam.
+^Preprocess_HT-HT-00CST-DTOD_0TZ_CST-$
+^Preprocess_HT-HT--DTOD_0_6_12_18TZ_CST-$	Dam Tailwater Elevation	Observed water-surface elevation below the dam.
+^Preprocess_HT-HT-Editable-SETS60-$
+^Preprocess_HT-HT--SETS60-$	Dam Tailwater Elevation	Observed water-surface elevation below the dam.
+^Preprocess_HT-QR.Tailwater--SETS60-$
+^Preprocess_QI-QI-Changed-SETS60-$
+^Preprocess_QI-QI--DTOD_0_6_12_18TZ_CST-$	Reservoir Inflow	Reservoir inflow calculated for the observed period using dam outflow (QT) and the change in reservoir storage, with canal flow included where applicable.
+^Preprocess_QI-QI--SETS60-$	Reservoir Inflow	Reservoir inflow calculated for the observed period using dam outflow (QT) and the change in reservoir storage, with canal flow included where applicable.
+^Preprocess_QT-QS.Total--SETS60-$
+^Preprocess_QT-QT-00CST-DTOD_0TZ_CST-$
+^Preprocess_QT-QT--DTOD_0_6_12_18TZ_CST-$	Total Dam Outflow	Total flow released through the dam, including spillway, sluice, and turbine flows.
+^Preprocess_QT-QT-Editable-SETS60-$
+^Preprocess_QT-QT--SETS60-$	Total Dam Outflow	Total flow released through the dam, including spillway, sluice, and turbine flows.
+^QPE_to_MAP-MAP--DTOD_0_6_12_18TZ_CST-$	Precipitation Areal Mean	Cumulative Rainfall
+^QPE_to_MAP-MAP-LMRFC_QPE-DTOD_0_6_12_18TZ_CST-$	Precipitation Areal Mean	Cumulative Rainfall
+^QPE_to_MAP-MAP-LMRFC_QPE-SETS60-$	Precipitation Areal Mean	Cumulative Rainfall
+^QPE_to_MAP-MAP-Merged-SETS60-$	Precipitation Areal Mean	Cumulative Rainfall
+^QPE_to_MAP-MAP-MRMS-DTOD_0_6_12_18TZ_CST-$	Precipitation Areal Mean	Cumulative Rainfall
+^QPE_to_MAP-MAP-MRMS-SETS60-$	Precipitation Areal Mean	Cumulative Rainfall
+^QPE_to_MAP-MAP--SETS60-$	Precipitation Areal Mean	Cumulative Rainfall
+^QPE_to_MAP-MAP-StationBased-DTOD_0_6_12_18TZ_CST-$	Precipitation Areal Mean	Cumulative Rainfall
+^QPE_to_MAP-MAP-StationBased-SETS60-$	Precipitation Areal Mean	Cumulative Rainfall

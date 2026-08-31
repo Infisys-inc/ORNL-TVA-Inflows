@@ -1,0 +1,23 @@
+folder	long_name	description
+^LAGK_.+_Forecast-QR-Rtd_Sim-DTOD_0_6_12_18TZ_CST-$	Routed Flow	upstream basin outflow after routing to the downstream basin (i.e.
+^LAGK_.+_Forecast-QR-Rtd_Sim-SETS60-$	Routed Flow	upstream basin outflow after routing to the downstream basin (i.e.
+^RW_6Hour_To_FEWS-HP-Sim-DTOD_0_6_12_18TZ_CST-$	Dam Headwater Elevation	Forecasted Water level at above dam
+^RW_6Hour_To_FEWS-HT-Sim-DTOD_0_6_12_18TZ_CST-$	Dam Tailwater Elevation	Forecasted Water level at below dam
+^RW_6Hour_To_FEWS-QT-Sim-DTOD_0_6_12_18TZ_CST-$	Total Dam Outflow	Forecasted total outflow of the dam
+^RW_6Hour_To_FEWS-QI-Sim-DTOD_0_6_12_18TZ_CST-$	Reservoir Inflow	Forecasted total inflow to the dam
+^ADJUSTQ_.+_Forecast-QR-Adj-SETS60-$	Adjusted River Flow	corrected outflow forecast, derived by adjusting the Simulated QR using the relationship between simulated and observed QR. A blending between the last observation and modelled data is used to smooth the transition between observations and forecasts. For basins with tributaries, total flow represents the simulated flow; otherwise, local flow is used.
+^ADJUSTQ_.+_Forecast-QR-Adj-DTOD_0_6_12_18TZ_CST-$	Adjusted River Flow	corrected outflow forecast, derived by adjusting the Simulated QR using the relationship between simulated and observed QR. A blending between the last observation and modelled data is used to smooth the transition between observations and forecasts. For basins with tributaries, total flow represents the simulated flow; otherwise, local flow is used.
+^CONSUMPTIVEUSE_ADJ_.+_Forecast-QR-Loc_Sim-DTOD_0_6_12_18TZ_CST-ALLQPF$	Simulated Local Flow	the model-simulated local outflow forecast for a basin
+^CONSUMPTIVEUSE_ADJ_.+_Forecast-QR-Loc_Sim-DTOD_0_6_12_18TZ_CST-GEFS.ENS$	Simulated Local Flow	the model-simulated local outflow forecast for a basin
+^CONSUMPTIVEUSE_.+_Forecast-QR-Loc_Sim-DTOD_0_6_12_18TZ_CST-ALLQPF$	Simulated Local Flow	the model-simulated local outflow forecast for a basin
+^CONSUMPTIVEUSE_.+_Forecast-QR-Loc_Sim-DTOD_0_6_12_18TZ_CST-GEFS.ENS$	Simulated Local Flow	the model-simulated local outflow forecast for a basin
+^CONSUMPTIVEUSE_.+_Forecast-QR-Loc_Sim-SETS60-ALLQPF$	Simulated Local Flow	the model-simulated local outflow forecast for a basin
+^CONSUMPTIVEUSE_.+_Forecast-QR-Loc_Sim-SETS60-GEFS.ENS$	Simulated Local Flow	the model-simulated local outflow forecast for a basin
+^SUM_LAGK_.+_Forecast-QR-Rtd_Sim-DTOD_0_6_12_18TZ_CST-$	Sum Routed Flow	sum of all routed flows arriving from upstream basins (i.e.
+^SUM_LAGK_.+_Forecast-QR-Rtd_Sim-SETS60-$	Sum Routed Flow	sum of all routed flows arriving from upstream basins (i.e.
+^TOTAL_.+_Forecast-QR-Loc_Sim-SETS60-$	Total Flow (Sum Routed + Adjusted Flows)	total flow at the basin outlet, calculated as the local basin outflow plus the Sum Routed QR from all upstream basins. Total QR = Adjusted QR + Sum Routed QR
+^TOTAL_.+_Forecast-QR-Sim-SETS60-$	Simulated Total Flow (Sum Routed Flow + Simulated Local Flow)	total flow at the basin outlet, calculated as the local basin outflow plus the Sum Routed QR from all upstream basins. Total QR = Local QR + Sum Routed QR
+^TOTAL_.+_Forecast-QR-Sim-DTOD_0_6_12_18TZ_CST-$	Simulated Total Flow (Sum Routed Flow + Simulated Local Flow)	total flow at the basin outlet, calculated as the local basin outflow plus the Sum Routed QR from all upstream basins. Total QR = Local QR + Sum Routed QR
+^RW_Hourly_To_FEWS-QT--SETS60-$	Total Dam Outflow	Forecasted total outflow of the dam
+^MergeMAP_.+_Forecast-MAP-DTOD_0_6_12_18TZ_CST-$	Precipitation Areal Mean	Custom forecasts built by combining various QPF sources (ML
+^MergeMAP_.+_Forecast-MAP-SETS60-$	Precipitation Areal Mean	Custom forecasts built by combining various QPF sources (ML
