@@ -14,7 +14,7 @@ from urllib.parse import quote_plus
 
 def main():
 	lock = mp.Manager().Lock()
-	with open(__file__.replace('.py', '.json'), "r") as r:
+	with open(__file__.replace('.py', '+.json'), "r") as r:
 		config = json_util.loads(r.read())
 	config["connection"] = config["connection"].format(password=quote_plus(keyring.get_password("MongoDB", "fews_admin")))
 
@@ -110,7 +110,7 @@ def write_file(ds, path, file_format, ensemble_id, location_ids, location_id, le
 		ds.attrs.update({"locationIds": location_ids, "ensembleIds": [ensemble_id], "ensembleMemberIds": ensemble_member_ids})
 		encoding = {"value": {"chunks": (1, forecast_time_chunk_size, 1, len(ensemble_member_ids), len(lead_times))}}
 		with lock:
-			utils.write_zarr(ds, path, file_format, encoding)
+			utils.write_zarr(ds, path, encoding)
 	elif file_format == "nc":
 		encoding = {
 			"value": {"dtype": "float32", "_FillValue": np.float32(np.nan), "zlib": True, "complevel": 5, "shuffle": True, "chunksizes": (1, forecast_time_chunk_size, 1, len(ensemble_member_ids), len(lead_times))},

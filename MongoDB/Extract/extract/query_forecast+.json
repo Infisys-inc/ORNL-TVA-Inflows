@@ -1,0 +1,29 @@
+{
+  "connection": "mongodb://fews_admin:{password}@knxpwmongodb1.main.tva.gov:27017/?tls=true&authSource=admin",
+  "database": "FEWS_ARCHIVE",
+  "queries": [
+    {
+      "resume": true,
+      "max_age_hours": 720,
+      "collection": "SimulatedForecastingScalarTimeSeries",
+      "forecast_time_key": "forecastTime",
+      "event_time_key": "t",
+      "event_value_key": "v",
+      "lead_time_days": 14,
+      "forecast_time_chunk_size": 1000,
+      "file_format": "nc",
+      "batch_size": 100,
+      "threads": 16,
+      "filter": {
+        "moduleInstanceId": [
+          "^CONSUMPTIVEUSE_.+_Forecast$",
+          "^LAGK_.+_Forecast$"],
+        "parameterId": [],
+        "qualifierId": [],
+        "ensembleId": [],
+        "locationId" : [],
+        "encodedTimeStepId": ["^(?!(?:DOY_)).*$"]
+      }
+    }
+  ]
+}

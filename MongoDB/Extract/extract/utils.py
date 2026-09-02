@@ -30,7 +30,7 @@ def ensure_path(path, resume=False):
 	os.makedirs(path, exist_ok=True)
 
 
-def write_zarr(ds, path, file_format, encoding):
+def write_zarr(ds, path, encoding):
 	if os.path.exists(path) and os.listdir(path):
 		ds.to_zarr(path, mode="a", consolidated=False, zarr_format=3, append_dim="locationId")
 	else:

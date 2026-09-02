@@ -56,6 +56,8 @@
           "^Preprocess_QR_Kingston$",
           "^RAS_.+_Forecast$",
           "^SUM_LAGK_.+_Forecast$",
+          "^CONSUMPTIVEUSE_.+_Forecast$",
+          "^LAGK_.+_Forecast$",
           "^TOTAL_.+_Forecast$",
           "^UNITHG_.+_Forecast$"],
         "parameterId": [],
